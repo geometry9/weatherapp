@@ -17,3 +17,7 @@ Run testing suite via `npm run test`
 
 ## Prod
 Production code is hosted at [here](https://forecast.space)
+
+## Notes
+
+With more time, on the functionality side, could do average for each day, select a day and display relevant data, loop through all the data sets for each day, search by city. On the data structure side, could organize relevant data better, use the redux store and update data on the fly every time data expires and do some more rigorous testing. Error alerting both from server as well as client.

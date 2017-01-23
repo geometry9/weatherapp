@@ -15,7 +15,6 @@ class WeatherApp extends React.Component {
     if(navigator.geolocation){
       navigator.geolocation.getCurrentPosition(
         (pos) => {
-          console.log(pos.coords.latitude, pos.coords.longitude);
           axios.post(`/forecast/${pos.coords.latitude}/${pos.coords.longitude}`)
           .then((data) => {
             this.setState({
@@ -77,7 +76,6 @@ class WeatherApp extends React.Component {
 
   render(){
     const currentDay = this.state.organized ? Object.keys(this.state.organized)[0] : {};
-    console.log(this.state.weatherData)
     return(
       <div className={styles['weather-container']}>
         { (this.state.weatherData) ?

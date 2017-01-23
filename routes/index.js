@@ -12,13 +12,10 @@ router.get('/', function(req, res, next) {
 
 router.get('/forecast', function(req, res, next) {
   var endPoint = "http://api.openweathermap.org/data/2.5/forecast?q=NewYork,us&appid=" + key;
-  console.log(endPoint);
   axios.get(endPoint)
   .then((data) => {
-    console.log('hey');
     res.json({ data: data.data });
   }).catch((error)=> {
-    console.log('heyo');
     res.json({ errors: error });
   });
 
