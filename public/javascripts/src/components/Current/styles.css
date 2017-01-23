@@ -1,0 +1,53 @@
+.current-weather{
+  height: 60%;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+.current-weather.night{
+  background: #2C2946;
+  background: linear-gradient(#2C2946, #A4CFC7);
+}
+.current-weather.day{ background: linear-gradient(#7BC3CA, #E3FFFF) }
+.city{
+  font-family: 'Amatic SC', cursive;
+  color: white;
+  font-weight: 100;
+  padding: 10px;
+  margin: 0;
+  font-size: 40px;
+}
+.orb{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 30%;
+  left: 21%;
+  border-radius: 50px;
+}
+.orb.night{
+  background: #ffffD5;
+}
+.orb.day{
+  background: #E57873;
+}
+.weather-information{
+  position: absolute;
+  right: 10%;
+  font-family: 'Josefin Slab', serif;
+  font-size: 20px;
+  text-shadow: 0px 1px 1px #CCC;
+}
+.icon{
+  font-size: 80px;
+  display: inline-block
+}
+.temperature{
+  font-size: 80px;
+  display: inline-block;
+}
+.desc{ font-size: 40px; }
+.wind{}
+.rain{}
+.sun{ background: #E35827; }
+.moon{ background: #fff; }
