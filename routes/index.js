@@ -16,7 +16,7 @@ router.get('/forecast', function(req, res, next) {
   .then((data) => {
     res.json({ data: data.data });
   }).catch((error)=> {
-    res.json({ error: error });
+    res.json({ errors: error });
   });
 
 });
@@ -26,10 +26,8 @@ router.post('/forecast/:lat/:lon', function(req, res, next) {
   console.log(endPoint);
   axios.get(endPoint)
   .then((data) => {
-    console.log('HEY');
     res.json({ data: data.data });
   }).catch((error)=> {
-    console.log('NOPE');
     res.json({ errors: error });
   });
 
