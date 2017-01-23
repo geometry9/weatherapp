@@ -23,7 +23,6 @@ router.get('/forecast', function(req, res, next) {
 
 router.post('/forecast/:lat/:lon', function(req, res, next) {
   var endPoint = "http://api.openweathermap.org/data/2.5/forecast?lat=" + req.params.lat + "&lon=" + req.params.lon + "&appid=" + key;
-  console.log(endPoint);
   axios.get(endPoint)
   .then((data) => {
     res.json({ data: data.data });

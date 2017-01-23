@@ -7,7 +7,7 @@
     "webpack-watch": "webpack -w",
     "express-server": "DEBUG=weatherapp:* nodemon ./bin/www",
     "dev": "concurrent --kill-others \"npm run webpack-watch\" \"npm run express-server\"",
-    "test": "mocha -w public/javascripts/src/test/browser.js public/javascripts/src/test/*.spec.js"
+    "test": "mocha --require ignore-styles -w public/javascripts/src/test/browser.js public/javascripts/src/test/*.spec.js"
   },
   "dependencies": {
     "axios": "^0.15.3",
@@ -33,10 +33,13 @@
     "webpack": "^1.14.0"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
     "classnames": "^2.2.5",
     "concurrently": "^3.1.0",
     "css-loader": "^0.26.1",
     "dotenv": "^4.0.0",
+    "enzyme": "^2.7.1",
+    "ignore-styles": "^5.0.1",
     "jsdom": "^9.9.1",
     "jsx-loader": "^0.13.2",
     "mocha": "^3.2.0",
