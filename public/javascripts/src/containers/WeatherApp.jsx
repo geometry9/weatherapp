@@ -27,17 +27,21 @@ class WeatherApp extends React.Component {
           }).catch((error) => console.log(error));
 
         },
-        (error)=> { console.log(error); },
+        (error)=> { this.getDefault(); },
         { timeout: 50000}
       );
     }else{
-      axios.get('/forecast').then((data)=> {
-        this.setState({
-          weatherData: data.data.data,
-          organized: this.organizeDataByDay(data.data.data)
-        });
-      }).catch((error) => console.log(error));
+      this.getDefault();
     }
+  }
+
+  getDefault(){
+    axios.get('/forecast').then((data)=> {
+      this.setState({
+        weatherData: data.data.data,
+        organized: this.organizeDataByDay(data.data.data)
+      });
+    }).catch((error) => console.log(error));
   }
 
   organizeDataByDay(data) {

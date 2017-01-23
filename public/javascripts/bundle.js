@@ -21591,18 +21591,25 @@
 	            return console.log(error);
 	          });
 	        }, function (error) {
-	          console.log(error);
+	          _this2.getDefault();
 	        }, { timeout: 50000 });
 	      } else {
-	        _axios2.default.get('/forecast').then(function (data) {
-	          _this2.setState({
-	            weatherData: data.data.data,
-	            organized: _this2.organizeDataByDay(data.data.data)
-	          });
-	        }).catch(function (error) {
-	          return console.log(error);
-	        });
+	        this.getDefault();
 	      }
+	    }
+	  }, {
+	    key: 'getDefault',
+	    value: function getDefault() {
+	      var _this3 = this;
+
+	      _axios2.default.get('/forecast').then(function (data) {
+	        _this3.setState({
+	          weatherData: data.data.data,
+	          organized: _this3.organizeDataByDay(data.data.data)
+	        });
+	      }).catch(function (error) {
+	        return console.log(error);
+	      });
 	    }
 	  }, {
 	    key: 'organizeDataByDay',
