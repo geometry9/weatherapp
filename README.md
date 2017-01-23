@@ -16,8 +16,9 @@ Run server via `npm run dev`. This will run `webpack --watch` and `nodemon ./bin
 Run testing suite via `npm run test`
 
 ## Prod
-Production code is hosted at [here](https://forecast.space)
+Production code is hosted at [here](https://forecasting.space)
+If SSL certificate is not working, you can find it [here](http://forecasting.space)
 
 ## Notes
 
-With more time, on the functionality side, could do average for each day, select a day and display relevant data, loop through all the data sets for each day, search by city. On the data structure side, could organize relevant data better, use the redux store and update data on the fly every time data expires and do some more rigorous testing. Error alerting both from server as well as client.
+With more time, on the functionality side, could do average for each day, select a day and display relevant data, loop through all the data sets for each day, search by city. On the data structure side, could organize relevant data better, use the redux store and update data on the fly every time data expires and do some more rigorous testing. Error alerting both from server as well as client. SETTING UP TESTING THE RIGHT WAY is also something that I would've enjoyed. </3 ANd a sweet deploy script or process.
