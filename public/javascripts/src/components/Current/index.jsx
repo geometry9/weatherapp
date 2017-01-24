@@ -52,7 +52,7 @@ class Current extends React.Component {
           <div className={styles["max-temp"]}>Max Temp: {this.getTempFahrenheit(this.props[0].main.temp_max)}F</div>
           <div className={styles["min-temp"]}>Min Temp: {this.getTempFahrenheit(this.props[0].main.temp_min)}F</div>
           <div className={styles.wind}></div>
-          <div className={styles.rain}>{this.props[0].rain["3h"] * 100}% chance of rain</div>
+          <div className={styles.rain}>{this.props[0].rain["3h"]}mm of rain in the last 3 hours</div>
         </div>
       </div>
     );
